@@ -1,9 +1,9 @@
-import InputBoard from "./components/inputBoard"
+import InputContainer from "./components/InputContainer"
 
 function App() {
   return (
     <>
-      <InputBoard/>
+      <InputContainer/>
     </>
     )
 }

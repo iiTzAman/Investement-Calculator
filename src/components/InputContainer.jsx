@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function InputBoard() {
+export default function InputContainer() {
 
     const [inputValues, setInputValues] = useState(
         {
@@ -30,19 +30,19 @@ export default function InputBoard() {
             <div className="input-group">
                 <p>
                     <label>Annual Investment</label>
-                    <input type="number" required />
+                    <input type="number" required placeholder={inputValues.annualInvestment} onChange={(input) => inputValuesHandler('annualInvestment', input.target.value)} />
                 </p>
             </div>
             <div className="input-group">
                 <p>
                     <label>Expected Return</label>
-                    <input type="number" required />
+                    <input type="number" required placeholder={inputValues.expectedReturn} onChange={(input) => inputValuesHandler('expectedReturn', input.target.value)} />
                 </p>
             </div>
             <div className="input-group">
                 <p>
                     <label>Duration</label>
-                    <input type="number" required />
+                    <input type="number" required placeholder={inputValues.duration} onChange={(input) => inputValuesHandler('duration', input.target.value)} />
                 </p>
             </div>
         </section>
